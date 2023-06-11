@@ -1,0 +1,128 @@
+:root{
+
+    /* --bubbles-main: #4fc3dc;
+    --bubbles-secundary: #ff2d75; */
+    --bubbles-main: #8b33ad;
+    --bubbles-secundary: #ffffff;
+    
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    background: #393939;
+    background: #111;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    
+}
+
+.container__bubbles{
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.bubbles{
+
+    position: relative;
+    display: flex;
+
+    
+}
+
+.bubbles span{
+
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--bubbles-main);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #5b3b5e44,
+    0 0 50px var(--bubbles-main),
+    0 0 100px var(--bubbles-main);
+
+
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+
+}
+
+.bubbles span:nth-child(even){
+
+    background: var(--bubbles-secundary);
+    box-shadow: 0 0 0 10px #b9b9b944,
+    0 0 50px var(--bubbles-secundary),
+    0 0 100px var(--bubbles-secundary);
+
+
+}
+
+@keyframes animate{
+
+    0%{
+
+        transform: translateY(100vh) scale(0);
+
+    }
+    100%{
+
+        transform: translateY(-10vh) scale(1);
+
+    }
+
+
+}
+
+.header{
+
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    margin: 2em 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .bubbles span{
+
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background: var(--bubbles-main);
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px #5b3b5e44,
+        0 0 50px var(--bubbles-main),
+        0 0 100px var(--bubbles-main);
+
+    
+    }
+
+
+}
+
+
