@@ -23,16 +23,23 @@ body{
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
+
+
+    place-items: center;
+    overflow: hidden;
     
 }
 
 .container__bubbles{
 
-    position: relative;
+    position: fixed;
     z-index: 1;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+
 
 
 }
@@ -91,8 +98,8 @@ body{
 
 .header{
 
-    position: fixed;
-    width: 100%;
+    position: relative;
+    
     z-index: 2;
     display: flex;
     margin: 2em 1em;
@@ -100,6 +107,98 @@ body{
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+
+
+}
+
+.main{
+
+   
+    /*position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    margin: auto;
+    padding: 2em;
+    gap: 20px;*/
+
+
+}
+
+.main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em;
+    
+
+}
+
+.hexagon-gallery{
+
+   
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 492px;
+    height: 454px;
+    display: grid;
+    place-items: center;
+    
+
+
+}
+
+.hexagon-gallery .hexagon{
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.hexagon-gallery .hexagon .hex{
+
+
+    background: rgb(163, 92, 190);
+    width: 144px;
+    height: 159px;
+    display: flex;
+    margin: 10px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50%
+    100%, 0% 75%, 0% 25%);
+
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+   
+
+}
+
+.hexagon-gallery  .hexagon:nth-child(1){
+
+    top: 0;
+   
+  
+
+}
+.hexagon-gallery  .hexagon:nth-child(3){
+    bottom: 0;
+
+}
+
+.hexagon-gallery  .hexagon .hex:hover{
+
+    background: red;
 
 }
 
@@ -112,6 +211,26 @@ body{
         position: relative;
         width: 10px;
         height: 10px;
+        background: var(--bubbles-main);
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px #5b3b5e44,
+        0 0 50px var(--bubbles-main),
+        0 0 100px var(--bubbles-main);
+
+    
+    }
+
+
+}
+
+@media screen and (max-width: 760px) {
+    
+    .bubbles span{
+
+        position: relative;
+        width: 5px;
+        height: 5px;
         background: var(--bubbles-main);
         margin: 0 4px;
         border-radius: 50%;
