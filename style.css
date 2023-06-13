@@ -196,9 +196,64 @@ body{
 
 }
 
+.hexagon-gallery  .hexagon .hex img{
+
+    filter: brightness(.5);
+    width: 100%;
+    object-fit: cover;
+
+    transition: all .3s ease-in-out;
+
+}
+
+
+
+
+.hexagon-gallery  .hexagon .hex img:hover{
+
+    filter: brightness(1);
+    width: 100%;
+    object-fit: cover;
+
+}
 .hexagon-gallery  .hexagon .hex:hover{
 
-    background: red;
+
+    transform: scale(1.1);
+
+
+}
+
+.modal{
+
+    position: fixed;
+    background: rgba(48, 48, 48, 0.333);
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    
+
+}
+
+.modal__img {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+
+
+}
+
+.modal__img .img__boxImg {
+
+    width: 80%;
+    
+    object-fit: contain;
 
 }
 
@@ -242,6 +297,10 @@ body{
     }
 
 
+
+
 }
+
+
 
 
