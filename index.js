@@ -140,6 +140,8 @@ const $boxImg=d.querySelector(".img__boxImg");
 
             $boxImg.src= e.target.src
             console.log(e.target)
+            $modalImg.classList.add("active")
+            $modalImg.style.transform="translateY(0%)"
 
             return
 
@@ -149,6 +151,8 @@ const $boxImg=d.querySelector(".img__boxImg");
 
             console.log("cierre modal")
             $modal.style.display="none";
+            $modalImg.classList.remove("active")
+            $modalImg.style.transform="translateY(50%)";
 
         }
 
