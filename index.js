@@ -46,7 +46,7 @@ d.addEventListener("DOMContentLoaded",()=>{
 
         for(let h=0; h < hexagonColumn; h++){
             
-            console.log(h)
+
             const hexagon= d.createElement("div")
             hexagon.classList.add("hexagon")
     
@@ -149,7 +149,7 @@ d.addEventListener("DOMContentLoaded",()=>{
 
 
                 }
-                console.log(h)
+     
 
                 if(h === 6){
 
@@ -279,20 +279,19 @@ const $boxImg=d.querySelector(".img__boxImg");
           console.log("tocaste un hexagono")
 
             $boxImg.src= e.target.src
-            console.log(e.target)
-            $modalImg.classList.add("active")
-            $modalImg.style.transform="translateY(0%)"
+            $modal.classList.add("active")
+            $modal.style.transform="translateX(0%)"
 
-            return
+          
 
         }
 
         if(e.target.classList.contains("modal__img")){
 
-            console.log("cierre modal")
-            $modal.style.display="none";
+        
             $modalImg.classList.remove("active")
-            $modalImg.style.transform="translateY(50%)";
+            $modal.style.transform= "translateX(100%)"
+        
 
         }
 
@@ -304,7 +303,7 @@ const $boxImg=d.querySelector(".img__boxImg");
         hexagonColumn= 8;
         hexagonRow= 2;
         queryHex();
-        console.log("entra a la query")
+
     
     }else{
     

@@ -17,8 +17,8 @@
 
 body{
 
-    background: #393939;
-    background: #111;
+    background: #191919;
+
     color: #fff;
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -113,20 +113,6 @@ body{
 
 }
 
-.main{
-
-   
-    /*position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    margin: auto;
-    padding: 2em;
-    gap: 20px;*/
-
-
-}
 
 .main{
 
@@ -238,7 +224,21 @@ body{
     z-index: 4;
     top: 0;
     bottom: 0;
+
+    transform: translateX(100%);
+
+
+
+  
     
+
+}
+
+.modal.active{
+
+
+   
+    transition: all .3s ease-in-out;
 
 }
 
@@ -251,36 +251,20 @@ body{
     width: 100%;
     height: 100%;
 
-    transform: translateY(50%);
-    transition: all 3s ease-in-out;
 }
 
-.modal__img.active{
-
-
-   transform: translateY(0%);
-   transition: all 3s ease-in-out;
-
-
-}
-
-.modal__img .img__boxImg {
+.img__boxImg {
 
     width: 35%;
     object-fit: contain;
-
-
-}
-
-
-.img__boxImg.img__scale {
-
-  
-
-    transform: scale(1);
     
+   
+
 
 }
+
+
+
 
 
 
@@ -345,10 +329,6 @@ body{
     
     }
 
-    .hexagon-gallery  .hexagon:nth-child(4){
-        bottom: 0;
-    
-    }
                 
     .hexagon-gallery{
 
@@ -396,6 +376,8 @@ body{
 
     }
 
+    
+
 
     .modal__img .img__boxImg {
 
@@ -404,6 +386,17 @@ body{
     
     
     }
+
+    .hexagon-gallery  .hexagon .hex img{
+
+        filter: brightness(1);
+        width: 100%;
+        object-fit: cover;
+    
+        transition: all .3s ease-in-out;
+    
+    }
+
 
    
 
