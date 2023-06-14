@@ -25,6 +25,8 @@ let draws= [
 
 let mediaQuery= window.matchMedia("(max-width: 768px)");
 
+    
+
 
 d.addEventListener("DOMContentLoaded",()=>{
 
@@ -40,85 +42,223 @@ d.addEventListener("DOMContentLoaded",()=>{
     
     
     }
+    const queryHex=()=>{
 
-
-    for(let h=0; h < hexagonColumn; h++){
-
-        const hexagon= d.createElement("div")
-        hexagon.classList.add("hexagon")
-
-        for(let i= 0; i < hexagonRow; i++){
-
-
+        for(let h=0; h < hexagonColumn; h++){
             
-            const hex= d.createElement("div");
-            hex.classList.add("hex");
-            hexagon.appendChild(hex);
-            const imgHex=d.createElement("img")
-            imgHex.classList.add("hex__img")
-
-         
-
-        
-                if(hexagonRow=== 3 && h!== 2){
+            console.log(h)
+            const hexagon= d.createElement("div")
+            hexagon.classList.add("hexagon")
     
+            for(let i= 0; i < hexagonRow; i++){
+    
+    
+                
+                const hex= d.createElement("div");
+                hex.classList.add("hex");
+                hexagon.appendChild(hex);
+                const imgHex=d.createElement("img")
+                imgHex.classList.add("hex__img")
+    
+                if(h === 0){
+
+                    imgHex.src= draws[i]
+                    hex.appendChild(imgHex)  
+
+                }else if(h === 1){
+
+                    imgHex.src= draws[i + 2]
+                    hex.appendChild(imgHex) 
+
+
+                }
+                if(h === 2){
+
+                    imgHex.src= draws[i + 3]
+                    hex.appendChild(imgHex) 
+
+
+
+                }else if(h === 3){
+
+                    imgHex.src= conceptArt[i]
+                    hex.appendChild(imgHex) 
+
+                }else if(h === 4){
+
+                    imgHex.src= conceptArt[i + 1]
+                    hex.appendChild(imgHex) 
+
+                }else if(h === 5){
+
+                    imgHex.src= conceptArt[i + 2]
+                    hex.appendChild(imgHex) 
+
+                }else if(h === 6){
+
                     imgHex.src= art3d[i]
-                    hex.appendChild(imgHex)
-                        
-    
-                }
+                    hex.appendChild(imgHex) 
 
-                if(hexagonRow === 3 && h === 2){
+                }else if(h === 7){
 
-                    imgHex.src= conceptArt[i]
-                    hex.appendChild(imgHex)
-
+                    imgHex.src= art3d[i + 1]
+                    hex.appendChild(imgHex) 
 
                 }
-                if(hexagonRow === draws.length){
-        
-                     
-                        imgHex.src= draws[i]
-                        hex.appendChild(imgHex)   
-                                       
-        
-                }
-
-
-                
-
-
-                if(hexagonRow === 5){
-
-                    hexagonRow = conceptArt.length;
-                    imgHex.src= conceptArt[i]
-                    hex.appendChild(imgHex)
-                
-                }
-
              
 
+                
+             
+             
+               
 
 
+              
+
+     
+
+                    
+    
             
+            
+    
+    
+                 
+    
+    
+    
+                
+    
+          
+    
+            
+    
+    
+               
+    
+                
+            }
+            
+            $hexagonGallery.appendChild(hexagon);
+    
+            if(hexagon.childElementCount === hexagonRow){
+                
+                if(hexagonRow === 2){
 
-      
+                    hexagonRow --;
+
+
+                }
+                console.log(h)
+
+                if(h === 6){
+
+                    hexagonRow++;
+
+                }
+
+              
+
+    
+    
+            }
 
         
 
 
-           
 
-            
+
         }
+    }
+    const createHex=()=>{
+
+        for(let h=0; h < hexagonColumn; h++){
+    
+            const hexagon= d.createElement("div")
+            hexagon.classList.add("hexagon")
+    
+            for(let i= 0; i < hexagonRow; i++){
+    
+    
+                
+                const hex= d.createElement("div");
+                hex.classList.add("hex");
+                hexagon.appendChild(hex);
+                const imgHex=d.createElement("img")
+                imgHex.classList.add("hex__img")
+    
+                    if(hexagonRow=== 2){
+
+                        imgHex.src= art3d[i]
+                        hex.appendChild(imgHex)
+
+                     
+
+                    }
+    
+            
+                    if(hexagonRow=== 3 && h!== 2){
         
-        $hexagonGallery.appendChild(hexagon);
-
-        if(hexagon.childElementCount === hexagonRow){
-
-            hexagonRow  ++;
-
-
+                        imgHex.src= art3d[i]
+                        hex.appendChild(imgHex)
+                            
+        
+                    }
+    
+                    if(hexagonRow === 3 && h === 2){
+    
+                        imgHex.src= conceptArt[i]
+                        hex.appendChild(imgHex)
+    
+    
+                    }
+                    if(hexagonRow === draws.length){
+            
+                         
+                            imgHex.src= draws[i]
+                            hex.appendChild(imgHex)   
+                                           
+            
+                    }
+    
+    
+                    
+    
+    
+                    if(hexagonRow === 5){
+    
+                        hexagonRow = conceptArt.length;
+                        imgHex.src= conceptArt[i]
+                        hex.appendChild(imgHex)
+                    
+                    }
+    
+                 
+    
+    
+    
+                
+    
+          
+    
+            
+    
+    
+               
+    
+                
+            }
+            
+            $hexagonGallery.appendChild(hexagon);
+    
+            if(hexagon.childElementCount === hexagonRow){
+                
+                hexagonRow  ++;
+    
+    
+            }
+    
+    
         }
 
 
@@ -159,6 +299,24 @@ const $boxImg=d.querySelector(".img__boxImg");
 
     })
 
+    if(mediaQuery.matches){
+        
+        hexagonColumn= 8;
+        hexagonRow= 2;
+        queryHex();
+        console.log("entra a la query")
+    
+    }else{
+    
+    
+    
+        createHex();
+    
+    }
+    
+
+    
+    
     
 
 
