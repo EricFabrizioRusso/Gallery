@@ -276,7 +276,7 @@ const $boxImg=d.querySelector(".img__boxImg");
 
 
             $modal.style.display="block";
-          console.log("tocaste un hexagono")
+          
 
             $boxImg.src= e.target.src
             $modal.classList.add("active")
@@ -302,6 +302,7 @@ const $boxImg=d.querySelector(".img__boxImg");
         
         hexagonColumn= 8;
         hexagonRow= 2;
+  
         queryHex();
 
     

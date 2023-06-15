@@ -4,8 +4,8 @@
 
     /* --bubbles-main: #4fc3dc;
     --bubbles-secundary: #ff2d75; */
-    --bubbles-main: #8b33ad;
-    --bubbles-secundary: #ffffff;
+    --bubbles-main: #c7eb45;
+    --bubbles-secundary: #fff;
     
 }
 
@@ -20,7 +20,6 @@
 body{
 
     background: #191919;
-
     color: #fff;
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -72,7 +71,7 @@ p{font-weight: 200;}
     background: var(--bubbles-main);
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #5b3b5e44,
+    box-shadow: 0 0 0 10px #79c41844,
     0 0 50px var(--bubbles-main),
     0 0 100px var(--bubbles-main);
 
@@ -136,6 +135,7 @@ p{font-weight: 200;}
     margin: auto;
     padding: 2em;
     width: 100%;
+    user-select: none;
     
 
 }
@@ -151,6 +151,7 @@ p{font-weight: 200;}
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
+
     place-items: center;
     margin: auto;
     
@@ -165,19 +166,19 @@ p{font-weight: 200;}
     justify-content: center;
     align-items: center;
 
-
-
+    
+    
 }
 
 
 .hexagon-gallery .hexagon .hex{
 
 
-    background: rgb(163, 92, 190);
+
     width: 144px;
     height: 159px;
     display: flex;
-    margin: 10px;
+    margin: 0 10px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50%
     100%, 0% 75%, 0% 25%);
 
@@ -186,19 +187,6 @@ p{font-weight: 200;}
    
 
 }
-
-.hexagon-gallery  .hexagon:nth-child(1){
-
-    top: 0;
-   
-  
-
-}
-.hexagon-gallery  .hexagon:nth-child(3){
-    bottom: 0;
-
-}
-
 .hexagon-gallery  .hexagon .hex img{
 
     filter: brightness(.5);
@@ -223,6 +211,8 @@ p{font-weight: 200;}
 
 
     transform: scale(1.1);
+   
+  
 
 
 }
@@ -230,7 +220,7 @@ p{font-weight: 200;}
 .modal{
 
     position: fixed;
-    background: rgba(48, 48, 48, .50);
+    background: rgba(48, 48, 48, .9);
     width: 100%;
     z-index: 4;
     top: 0;
@@ -261,6 +251,7 @@ p{font-weight: 200;}
     align-items: center;
     width: 100%;
     height: 100%;
+  
 
 }
 
@@ -268,6 +259,9 @@ p{font-weight: 200;}
 
     width: 35%;
     object-fit: contain;
+    padding: .3em;
+    background: #fff;
+    border-radius: .5em;
     
    
 
@@ -319,7 +313,7 @@ p{font-weight: 200;}
         background: var(--bubbles-main);
         margin: 0 4px;
         border-radius: 50%;
-        box-shadow: 0 0 0 10px #5b3b5e44,
+        box-shadow: 0 0 0 10px #94c52044,
         0 0 50px var(--bubbles-main),
         0 0 100px var(--bubbles-main);
 
