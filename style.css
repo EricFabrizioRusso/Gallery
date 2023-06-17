@@ -134,8 +134,11 @@ p{font-weight: 200;}
     max-width: 1200px;
     margin: auto;
     padding: 2em;
-    width: 100%;
+    width: 80%;
     user-select: none;
+    background: rgb(57, 57, 57,.2);
+  
+    border-radius: .5em;
     
 
 }
@@ -154,6 +157,7 @@ p{font-weight: 200;}
 
     place-items: center;
     margin: auto;
+
     
 
 
@@ -187,6 +191,10 @@ p{font-weight: 200;}
    
 
 }
+
+
+
+
 .hexagon-gallery  .hexagon .hex img{
 
     filter: brightness(.5);
@@ -347,6 +355,7 @@ p{font-weight: 200;}
         display: grid;
         grid-template-columns: 1fr;
         place-items: center;
+
 
 
 
