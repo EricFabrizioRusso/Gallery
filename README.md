@@ -2,3 +2,5 @@
 
 
 In this gallery, most of the elements are dynamically created using JavaScript.
+
+![Gallery](/assets/galleryBackground.png)
